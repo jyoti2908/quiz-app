@@ -15,7 +15,6 @@ function App() {
       <BrowserRouter>
         <Home />
         <Routes>
-          <Route path="/" element={<Body />} />
           <Route path="/html" element={<Html />} />
           <Route path="/css" element={<Css />} />
           <Route path="/javascript" element={<Javascript />} />
