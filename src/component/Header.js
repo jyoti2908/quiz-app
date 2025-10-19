@@ -1,33 +1,34 @@
-import { FaRegQuestionCircle } from "react-icons/fa";
+import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
 
 function Header() {
     return (
-        <div>
-            <div className="font-semibold text-sm flex justify-around text-center gap-6 px-4 py-4 w-screen h-16 bg-[#1C1C1C] text-white">
-                <div>
-                    <FaRegQuestionCircle  className="h-6 w-6 ml-4"/>
-                    <p className="text-green-400 text-md">WEBQuiz</p>
+        <div className="w-full bg-[#1C1C1C] text-white px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+                {/* Logo Section */}
+                <div className="flex flex-row items-center gap-2 md:flex-col md:gap-0">
+                    <HiOutlineQuestionMarkCircle className="h-6 w-6" />
+                    <p className="text-green-400 text-md font-semibold">WEB<span className="text-xs">Quiz</span></p>
                 </div>
                 <div />
-                <div />
-                <div className="">
-                    <ul className="flex flex-row gap-8 px-4 py-2 text-gray-400">
-                        <li>HOME </li>
-                        <li>ABOUT</li>
-                        <li>QUIZ</li>
-                        <li>PRICING</li>
-                        <li>CONTACT </li>
-                        <li>CONTRIBUTE </li>
-                        <li>|</li>
-                    </ul>
-                </div>
-                <div>
-                    <button className="font-semibold text-xs p-2 h-8 w-24 border-none bg-green-400 text-white rounded-3xl">SIGN IN</button>
-                    <button className="ml-4 font-semibold text-xs p-2 h-8 w-24 border-[1px] border-green-400 bg-transparent text-white rounded-3xl">SIGN UP</button>
+                {/* Navigation */}
+                <ul className="mx-auto md:mx-0 flex flex-wrap text-sm gap-2 md:gap-8 md:text-md text-gray-400">
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">HOME</li>
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">ABOUT</li>
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">QUIZ</li>
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">PRICING</li>
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">CONTACT</li>
+                    <li className="transition-transform duration-300 ease-in-out transform hover:scale-90 hover:text-purple-300">CONTRIBUTE</li>
+                    <li>|</li>
+                </ul>
+
+                {/* Button Group - Always side by side */}
+                <div className="mx-auto md:mx-0 flex flex-nowrap gap-4">
+                    <button className="font-semibold text-xs px-4 py-2 h-8 w-24 bg-green-400 text-white rounded-3xl">SIGN IN</button>
+                    <button className="font-semibold text-xs px-4 py-2 h-8 w-24 border border-green-400 text-white rounded-3xl">SIGN UP</button>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }
+
 export default Header;
